@@ -1,0 +1,11 @@
+<h2><%= @article.title %></h2>
+<h3><%= @article.writer.name %></h3>
+<div class="article-body">
+  <% @article.content.each_line do |paragraph| %>
+    <p><%= paragraph %></p>
+  <% end %>
+
+
+
+
+</div>

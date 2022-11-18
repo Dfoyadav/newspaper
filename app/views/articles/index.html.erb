@@ -1,0 +1,28 @@
+<h2>All Articles</h2>
+
+<table>
+  <tr>
+    <th>Section</th>
+    <th>Title</th>
+    <th>Writer</th>
+    <th>Content</th>
+  </tr>
+
+  <% @articles.each do |article| %>
+    <tr>
+      <td class="section-link">
+        <%= link_to article.section.name, article.section %>
+      </td>
+      <td class="article-title">
+        <%= link_to article.title, article %>
+      </td>
+      <td class="writer-link">
+        <%= link_to article.writer.name, article.writer %>
+      <td class="article-snippet"><%= article.snippet %></td>
+    </tr>
+  <% end %>
+
+
+  <%= link_to 'New Articles ', new_article_path %> 
+
+</table>
